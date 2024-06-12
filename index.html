@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./index.css">
+
+    <title>Caga Horária 99</title>
+</head>
+
+<body>
+
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Planilha de Carga Horária</h1>
+        <form id="formDados" class="mb-3">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Data" id="Data" name="Data">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Hora de Entrada" id="HoraDeEntrada" name="HoraDeEntrada">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Tempo do Intervalo" id="TempoDoIntervalo" name="TempoDoIntervalo">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Hora de Saída" id="HoraDeSaida" name="HoraDeSaida">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Valor do Dia" id="ValorDoDia" name="ValorDoDia">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Taxa da Gasolina" id="TaxaDaGasolina" name="TaxaDaGasolina">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Lucro do Dia" id="LucroDoDia" name="LucroDoDia">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Adicionar</button>
+            
+        </form>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Hora de Entrada</th>
+                    <th>Tempo do Intervalo</th>
+                    <th>Hora de Saída</th>
+                    <th>Valor do Dia</th>
+                    <th>Taxa da Gasolina</th>
+                    <th>Lucro do Dia</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-carga-horaria">
+                <!-- Conteúdo será inserido pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+<script>
+    carregarEExibirDadosLocalStorage();
+</script>
+
+</body>
+
+</html>
